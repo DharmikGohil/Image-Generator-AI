@@ -13,7 +13,7 @@ function ImageGenerator() {
       return 0;
     }
 
-    const myapiKey = process.env.REACT_APP_OPENAI_API_KEY;
+    const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
 
     // Accessing the environment variable
 
@@ -23,7 +23,7 @@ function ImageGenerator() {
         method: "post",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${myapiKey}`, // Using the apiKey variable here
+          Authorization: `Bearer ${apiKey}`, // Using the apiKey variable here
           "User-Agent": "Chrome",
         },
         body: JSON.stringify({
