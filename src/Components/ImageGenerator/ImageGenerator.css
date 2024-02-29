@@ -18,16 +18,9 @@
   
   .header span {
     color: #de1b89;
-    font-family: 'Righteous', cursive;
+    
     font-weight: bold;
-    background:url('https://media.giphy.com/media/FE0WTM8BG754I/giphy.gif') center center no-repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* font-size:7rem; */
-    letter-spacing:10px;
-    background-size:cover;
-    margin:0px;
-    color:transparent;
+    
   }
   
   .img-loading img {

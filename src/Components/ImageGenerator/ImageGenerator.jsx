@@ -2,10 +2,6 @@ import React, { useRef, useState } from "react";
 import "./ImageGenerator.css";
 import default_image from "../Assets/default_image.svg";
 
-// require('dotenv').config()
-
-const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
-
 function ImageGenerator() {
   const [image_url, setImage_url] = useState("/");
   const [loading, setLoading] = useState(false);
@@ -17,13 +13,17 @@ function ImageGenerator() {
       return 0;
     }
 
+    const myapiKey = process.env.REACT_APP_OPENAI_API_KEY;
+
+    // Accessing the environment variable
+
     const respose = await fetch(
       "https://api.openai.com/v1/images/generations",
       {
         method: "post",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`, // Using the apiKey variable here
+          Authorization: `Bearer ${myapiKey}`, // Using the apiKey variable here
           "User-Agent": "Chrome",
         },
         body: JSON.stringify({
@@ -79,7 +79,6 @@ function ImageGenerator() {
           Generate
         </div>
       </div>
-      <footer>&copy; {new Date().getFullYear()} Dharmik Gohil</footer>
     </div>
   );
 }
